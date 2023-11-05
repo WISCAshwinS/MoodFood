@@ -6,6 +6,8 @@ struct MainPageView: View {
     var body: some View {
         NavigationView{
             ZStack {
+
+                
                 Color(red: 52 / 255, green: 203 / 255, blue: 114 / 255)
                     .edgesIgnoringSafeArea(.all)
                 
