@@ -1,48 +1,68 @@
-//
-//  SettingsView.swift
-//  FluidTechSports
-//
-//  Created by Anmol Gulati on 6/13/23.
-//
-
 import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var viewModel: AuthViewModel
-    @State var termsOfService: Bool = false
-    @State var privayPol: Bool = false
-    @State var aboutFST: Bool = false
-    @State var contactUs: Bool = false
+    @State private var notificationEnabled = true
+    @State private var darkModeEnabled = false
+    @State private var isOn = false
     
-    var body: some View {
-        NavigationView {
-            Button(action: {
-                viewModel.signOut()
-            }) {
-                Text("Log Out")
-                    .foregroundColor(.red)
-            }
-            .toolbar {
-                ToolbarItemGroup(placement: .bottomBar) {
-
-                    NavigationLink(destination: MainPageView().navigationBarHidden(true)) {
-                        VStack {
-                            
-                            Image(systemName: "house")
-                                .font(.system(size: 30)) // Enlarge the house icon
-                                .padding(.top, 15)
-                        }
-                    }
-
-                }
-            }
-        }
-        .navigationBarBackButtonHidden(true)
-        
+    struct DietPreference: Identifiable {
+        var id: String
+        var isPreferred = false
     }
     
-}
-
+    @State var dietPreferences = [
+    DietPreference(id: "Vegetarian", isPreferred: false),
+    DietPreference(id: "Vegan", isPreferred: false),
+    DietPreference(id: "Pescatarian", isPreferred: false),
+    DietPreference(id: "No Beef", isPreferred: false),
+    DietPreference(id: "No Pork", isPreferred: false)]
+    
+    var body: some View {
+        
+            NavigationView {
+                    Form {
+                        VStack {
+                            Section() {
+                                Image("sample_profile_pic")
+                                    .clipShape(Circle())
+                                    .frame(alignment: .center)
+                                    .padding(.top)
+                                Text("John Doe")
+                                    .font(.largeTitle)
+                                    .frame(alignment: .center)
+                            }
+                            
+                            Spacer()
+                            Section(header: Text("Notification Settings")) {
+                                Toggle("Enable Notifications", isOn: $isOn)
+                            }
+                            
+                            Spacer()
+                            Section(header: Text("Food Preferences")) {
+                                ForEach($dietPreferences) { $dietPreferences in
+                                    Toggle(dietPreferences.id, isOn: $dietPreferences.isPreferred)
+                                }
+                            }
+                            
+                            Spacer()
+                            NavigationLink {
+                                ResetView()
+                                    .navigationBarBackButtonHidden(true)
+                            } label: {
+                                Text("SIGN OUT")
+                            }
+                                .fontWeight(.bold)
+                                .foregroundColor(.red)
+                                .padding(.bottom, 15)
+                        }
+                        .navigationBarTitle("Settings")
+                        .padding(.horizontal)
+                        .padding(.vertical)
+                    }
+                        }
+                }
+        }
 
 
 
@@ -52,5 +72,4 @@ struct SettingsView_Previews: PreviewProvider {
         SettingsView()
     }
 }
-
 
