@@ -22,6 +22,20 @@ struct SettingsView: View {
                 Text("Log Out")
                     .foregroundColor(.red)
             }
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+
+                    NavigationLink(destination: MainPageView().navigationBarHidden(true)) {
+                        VStack {
+                            
+                            Image(systemName: "house")
+                                .font(.system(size: 30)) // Enlarge the house icon
+                                .padding(.top, 15)
+                        }
+                    }
+
+                }
+            }
         }
         .navigationBarBackButtonHidden(true)
         

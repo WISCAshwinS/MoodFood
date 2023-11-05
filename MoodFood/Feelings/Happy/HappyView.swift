@@ -44,7 +44,7 @@ struct HappyView: View {
                         VStack(spacing: 20) {
                             // First button for 'Happy'.
                             NavigationLink(destination: HappyView()) {
-                                Text("Indian")
+                                Text("🇮🇳 Indian 🇮🇳")
                                     .font(.title)
                                     .foregroundColor(.black)
                                     .fontWeight(.bold)
@@ -53,7 +53,7 @@ struct HappyView: View {
                                     .clipShape(RoundedRectangle(cornerRadius: 30))
                             }
                             NavigationLink(destination: SadView()) {
-                                Text("Mexican")
+                                Text("🇲🇽 Mexican 🇲🇽")
                                     .font(.title)
                                     .foregroundColor(.black)
                                     .fontWeight(.bold)
@@ -62,7 +62,7 @@ struct HappyView: View {
                                     .clipShape(RoundedRectangle(cornerRadius: 30))
                             }
                             NavigationLink(destination: StressView()) {
-                                Text("Italian")
+                                Text("🇮🇹 Italian 🇮🇹")
                                     .font(.title)
                                     .foregroundColor(.black)
                                     .fontWeight(.bold)
@@ -71,7 +71,7 @@ struct HappyView: View {
                                     .clipShape(RoundedRectangle(cornerRadius: 30))
                             }
                             NavigationLink(destination: EnergeticView()) {
-                                Text("Chinese")
+                                Text("🇨🇳 Chinese 🇨🇳 ")
                                     .font(.title)
                                     .foregroundColor(.white)
                                     .fontWeight(.bold)
@@ -80,7 +80,7 @@ struct HappyView: View {
                                     .clipShape(RoundedRectangle(cornerRadius: 30))
                             }
                             NavigationLink(destination: EnergeticView()) {
-                                Text("Japanese")
+                                Text("🇯🇵 Japanese 🇯🇵")
                                     .font(.title)
                                     .foregroundColor(.white)
                                     .fontWeight(.bold)
@@ -105,8 +105,53 @@ struct HappyView: View {
                     .padding(.top,15)
                 }
                 Spacer() // Push everything to the top.
+                
+                    .navigationBarTitleDisplayMode(.inline)  // Ensures title is in-line with toolbar items.
+                     .toolbar {
+                         // Leading alignment space
+                         ToolbarItem(placement: .navigationBarLeading) {
+                         }
+                         
+                         // Back Button
+                        
+                         
+                         // Trailing gear button
+                         ToolbarItem(placement: .navigationBarTrailing) {
+                             HStack{
+                                 NavigationLink(destination: MainPageView()) {
+                                     Image(systemName: "arrow.backward")
+                                         .resizable()
+                                         .frame(width: 30, height: 30)
+                                         .foregroundColor(.black) // Set the image color to black for contrast
+                                 }
+                                 Spacer()
+                                 NavigationLink(destination: SettingsView()) {
+                                     Image(systemName: "gearshape.fill")
+                                         .resizable()
+                                         .frame(width: 30, height: 30)
+                                         .foregroundColor(.black) // Set the image color to black for contrast
+                                 }
+                                 
+                                 //arrow.backward
+                             }
+                         }
+
+                         // Bottom bar with house icon
+                         ToolbarItemGroup(placement: .bottomBar) {
+                             Spacer() // Use spacer to push the icon to the center
+
+                             NavigationLink(destination: MainPageView().navigationBarHidden(true)) {
+                                 Image(systemName: "house")
+                                     .font(.system(size: 30)) // Enlarge the house icon
+                             }
+
+                             Spacer() // Use another spacer to ensure the icon stays in the center
+                         }
+                     }
                 }
             }
+        .navigationBarBackButtonHidden(true)
+
         }
     }
 
