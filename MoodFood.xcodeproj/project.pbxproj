@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BD1481D2AF72EB2001FC727 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1481C2AF72EB1001FC727 /* SettingsView.swift */; };
 		26DE7E842AF6CFAF002BC1E6 /* MoodFoodApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE7E832AF6CFAF002BC1E6 /* MoodFoodApp.swift */; };
 		26DE7E862AF6CFAF002BC1E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE7E852AF6CFAF002BC1E6 /* ContentView.swift */; };
 		26DE7E882AF6CFB1002BC1E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DE7E872AF6CFB1002BC1E6 /* Assets.xcassets */; };
@@ -22,7 +23,6 @@
 		26DE7EAC2AF6E3AC002BC1E6 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE7EAB2AF6E3AC002BC1E6 /* MainPageView.swift */; };
 		26DE7EAF2AF6E421002BC1E6 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE7EAE2AF6E421002BC1E6 /* InputView.swift */; };
 		26DE7EB22AF6E71E002BC1E6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE7EB12AF6E71E002BC1E6 /* User.swift */; };
-		26DE7EB42AF6F1B5002BC1E6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE7EB32AF6F1B5002BC1E6 /* SettingsView.swift */; };
 		26DE7EBC2AF71773002BC1E6 /* HappyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE7EBB2AF71773002BC1E6 /* HappyView.swift */; };
 		26DE7EBE2AF71781002BC1E6 /* SadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE7EBD2AF71781002BC1E6 /* SadView.swift */; };
 		26DE7EC02AF7178D002BC1E6 /* StressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE7EBF2AF7178D002BC1E6 /* StressView.swift */; };
@@ -31,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BD1481C2AF72EB1001FC727 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = ../../../../../.Trash/SettingsView.swift; sourceTree = "<group>"; };
 		26DE7E802AF6CFAF002BC1E6 /* MoodFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26DE7E832AF6CFAF002BC1E6 /* MoodFoodApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodFoodApp.swift; sourceTree = "<group>"; };
 		26DE7E852AF6CFAF002BC1E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		26DE7EAB2AF6E3AC002BC1E6 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		26DE7EAE2AF6E421002BC1E6 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		26DE7EB12AF6E71E002BC1E6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		26DE7EB32AF6F1B5002BC1E6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		26DE7EBB2AF71773002BC1E6 /* HappyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyView.swift; sourceTree = "<group>"; };
 		26DE7EBD2AF71781002BC1E6 /* SadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadView.swift; sourceTree = "<group>"; };
 		26DE7EBF2AF7178D002BC1E6 /* StressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StressView.swift; sourceTree = "<group>"; };
@@ -135,10 +135,10 @@
 		26DE7EA42AF6E37F002BC1E6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0BD1481C2AF72EB1001FC727 /* SettingsView.swift */,
 				26DE7EA62AF6E388002BC1E6 /* LoginView.swift */,
 				26DE7EA72AF6E388002BC1E6 /* RegistrationView.swift */,
 				26DE7EA52AF6E388002BC1E6 /* ResetView.swift */,
-				26DE7EB32AF6F1B5002BC1E6 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -290,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BD1481D2AF72EB2001FC727 /* SettingsView.swift in Sources */,
 				26DE7EA82AF6E388002BC1E6 /* ResetView.swift in Sources */,
 				26DE7EAC2AF6E3AC002BC1E6 /* MainPageView.swift in Sources */,
 				26DE7EC02AF7178D002BC1E6 /* StressView.swift in Sources */,
@@ -298,7 +299,6 @@
 				26DE7E862AF6CFAF002BC1E6 /* ContentView.swift in Sources */,
 				26DE7E842AF6CFAF002BC1E6 /* MoodFoodApp.swift in Sources */,
 				26DE7EBC2AF71773002BC1E6 /* HappyView.swift in Sources */,
-				26DE7EB42AF6F1B5002BC1E6 /* SettingsView.swift in Sources */,
 				26DE7EB22AF6E71E002BC1E6 /* User.swift in Sources */,
 				26DE7EAA2AF6E388002BC1E6 /* RegistrationView.swift in Sources */,
 				26DE7EC42AF717A3002BC1E6 /* TiredView.swift in Sources */,
