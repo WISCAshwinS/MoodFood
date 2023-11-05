@@ -28,6 +28,7 @@
 		26DE7EC02AF7178D002BC1E6 /* StressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE7EBF2AF7178D002BC1E6 /* StressView.swift */; };
 		26DE7EC22AF7179B002BC1E6 /* EnergeticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE7EC12AF7179B002BC1E6 /* EnergeticView.swift */; };
 		26DE7EC42AF717A3002BC1E6 /* TiredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE7EC32AF717A3002BC1E6 /* TiredView.swift */; };
+		7B65AF6C2AF72EF200EC17FF /* AllRecipesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65AF6B2AF72EF200EC17FF /* AllRecipesRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		26DE7EBF2AF7178D002BC1E6 /* StressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StressView.swift; sourceTree = "<group>"; };
 		26DE7EC12AF7179B002BC1E6 /* EnergeticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergeticView.swift; sourceTree = "<group>"; };
 		26DE7EC32AF717A3002BC1E6 /* TiredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiredView.swift; sourceTree = "<group>"; };
+		7B65AF6B2AF72EF200EC17FF /* AllRecipesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecipesRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		26DE7E822AF6CFAF002BC1E6 /* MoodFood */ = {
 			isa = PBXGroup;
 			children = (
+				7B65AF6A2AF72EC600EC17FF /* RecipeAPI */,
 				26DE7EB52AF71424002BC1E6 /* Feelings */,
 				26DE7EB02AF6E70A002BC1E6 /* Model */,
 				26DE7EAD2AF6E415002BC1E6 /* Components */,
@@ -211,6 +214,14 @@
 			path = Tired;
 			sourceTree = "<group>";
 		};
+		7B65AF6A2AF72EC600EC17FF /* RecipeAPI */ = {
+			isa = PBXGroup;
+			children = (
+				7B65AF6B2AF72EF200EC17FF /* AllRecipesRequest.swift */,
+			);
+			path = RecipeAPI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -305,6 +316,7 @@
 				26DE7EC22AF7179B002BC1E6 /* EnergeticView.swift in Sources */,
 				26DE7EA92AF6E388002BC1E6 /* LoginView.swift in Sources */,
 				26DE7EA32AF6E370002BC1E6 /* AuthViewModel.swift in Sources */,
+				7B65AF6C2AF72EF200EC17FF /* AllRecipesRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
