@@ -116,11 +116,54 @@ struct MainPageView: View {
                     .padding(.top,15)
                 }
                 Spacer() // Push everything to the top.
+                
+                    .navigationBarTitleDisplayMode(.inline)  // Ensures title is in-line with toolbar items.
+                     .toolbar {
+                         // Leading alignment space
+                         ToolbarItem(placement: .navigationBarLeading) {
+                             Spacer()
+                         }
+                         
+                         // Centered Text
+                         ToolbarItem(placement: .principal) {
+                             Text("Hi John Doe")
+                                 .font(.system(size: 25))
+                                 .fontWeight(.semibold)
+
+                             
+                                 .foregroundColor(.black) // Set the text color to black for contrast
+                         }
+                         
+                         // Trailing gear button
+                         ToolbarItem(placement: .navigationBarTrailing) {
+                             NavigationLink(destination: SettingsView()) {
+                                 Image(systemName: "gearshape.fill")
+                                     .resizable()
+                                     .frame(width: 30, height: 30)
+                                     .foregroundColor(.black) // Set the image color to black for contrast
+                             }
+                         }
+
+                         // Bottom bar with house icon
+                         ToolbarItemGroup(placement: .bottomBar) {
+                             Spacer() // Use spacer to push the icon to the center
+
+                             NavigationLink(destination: MainPageView().navigationBarHidden(true)) {
+                                 Image(systemName: "house")
+                                     .font(.system(size: 30)) // Enlarge the house icon
+                             }
+
+                             Spacer() // Use another spacer to ensure the icon stays in the center
+                         }
+                     }
+
+                }
             }
+        .navigationBarBackButtonHidden(true)
+
         }
-        
     }
-}
+
 
 
 struct MainPageView_Previews: PreviewProvider {
